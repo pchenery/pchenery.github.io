@@ -1,0 +1,57 @@
+//colors
+$color_deep_cove_approx: rgb(11, 11, 59);
+$black:  black;
+$aquamarine: aquamarine;
+$blue: blue;
+
+//fonts
+$font_0: Verdana;
+$font_1: Tahoma;
+$font_2: sans-serif;
+
+h1 {
+	text-align: center;
+	color: $color_deep_cove_approx;
+	border: 4px solid $black;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	margin: auto;
+	width: 25%;
+	padding: 10px;
+	background-color: $aquamarine;
+}
+h2 {
+	text-align: left;
+	color: $color_deep_cove_approx;
+	margin-left: 50px;
+	width: 50%;
+	padding: 10px;
+}
+p {
+	color: $black;
+	margin-left: 60px;
+	font-family: $font_0, $font_1, $font_2;
+}
+ul {
+	margin-left: 60px;
+	line-height: 1.5;
+	list-style-type: circle;
+}
+ol {
+	margin-left: 60px;
+	line-height: 1.5;
+}
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.5;
+	width: 10%;
+	&:hover {
+		opacity: 1.0;
+		filter: alpha(opacity=100);
+	}
+}
+a:active {
+	color: $blue;
+}
