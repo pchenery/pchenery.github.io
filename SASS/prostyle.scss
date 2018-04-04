@@ -3,23 +3,34 @@ $color_deep_cove_approx: rgb(11, 11, 59);
 $black:  black;
 $aquamarine: aquamarine;
 $blue: blue;
+$yellow: yellow;
 
 //fonts
 $font_0: Verdana;
 $font_1: Tahoma;
 $font_2: sans-serif;
 
+@mixin box-shadow($left, $top, $size, $color) {
+	box-shadow: $left, $top, $size, $color;
+}
+
 h1 {
 	text-align: center;
 	color: $color_deep_cove_approx;
 	border: 4px solid $black;
-	//Could use @include border-radius($radius, $vertical-radius)
 	border-radius: 4px;
 	margin: auto;
 	width: 25%;
 	padding: 10px;
 	background-color: $aquamarine;
 }
+.box{
+	width: 100px;
+	height: 100px;
+	background: $blue;
+@include box-shadow(2px,2px,4px, rgba(0,0,0,0.6));
+}
+
 h2 {
 	text-align: left;
 	color: $color_deep_cove_approx;
