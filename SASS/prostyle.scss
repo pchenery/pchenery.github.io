@@ -24,11 +24,12 @@ h1 {
 	padding: 10px;
 	background-color: $aquamarine;
 }
-.box{
+
+.button{
 	width: 100px;
 	height: 100px;
 	background: $blue;
-@include box-shadow(2px,2px,4px, rgba(0,0,0,0.6));
+//@include box-shadow(2px,2px,4px, rgba(0,0,0,0.6));
 }
 
 h2 {
@@ -45,24 +46,31 @@ p {
 }
 ul {
 	margin-left: 60px;
-	line-height: 1.5;
+	line-height: 1.2;
 	list-style-type: circle;
 }
 ol {
 	margin-left: 60px;
-	line-height: 1.5;
+	line-height: 1.2;
 }
+
 img {
+	//left: 200px;
+	//top: 500px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	opacity: 0.5;
-	width: 10%;
 	&:hover {
 		opacity: 1.0;
 		filter: alpha(opacity=100);
 	}
 }
+
+#homer{
+	position: absolute;
+	bottom: 80px;
+	right: 25px;
+}
+
 a:active {
 	color: $blue;
 }
