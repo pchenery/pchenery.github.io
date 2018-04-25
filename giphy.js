@@ -26,19 +26,18 @@ function getGif() {
     var response = request.response;
     //var imageUrl = response.data.image_url;
     var obj = response.data;
-    var row;
     //alert (obj[0].id);
     //document.getElementById('gif').src = imageUrl;
-    row += "<table border='1'>"
+    var row = "<table border='1'>";
     for (i in obj){
         row += "<tr><td>" + obj[i]["id"] + "</td>";
         row += "<td>" + obj[i]["username"] + "</td>";
         row += "<td>" + obj[i]["rating"] + "</td>";
         row += "<td>" + obj[i]["title"] + "</td>";
-        row += "<td>" + "<image src>" + obj[i]["images[0]"] + "</image src>" + "</td></tr>";
+        row += "<td>" + "<image src>" + obj[i]['imageUrl'] + "</image src>" + "</td></tr>";
     }
     row += "</table>"
-    document.getElementById('source').innerHTML = row;
+    document.getElementById('divTable').innerHTML = row;
     }
 
     var gifs = $('gifs');
