@@ -10,6 +10,19 @@ $font_0: Verdana;
 $font_1: Tahoma;
 $font_2: sans-serif;
 
+code{
+	font-size: 1em;
+}
+
+@media all and (max-width: 629px){
+	#divTable{
+		display: flex;
+		align-items: stretch;
+		flex-flow: column wrap;
+	}
+	width: 100%
+}
+
 @mixin box-shadow($left, $top, $size, $color) {
 	box-shadow: $left, $top, $size, $color;
 }
@@ -19,9 +32,11 @@ h1 {
 	color: $color_deep_cove_approx;
 	border: 4px solid $black;
 	border-radius: 4px;
+	font-size: 1.5em;
 	margin: auto;
 	width: 25%;
 	padding: 10px;
+	position: relative;
 	background-color: $aquamarine;
 }
 
@@ -36,6 +51,7 @@ h2 {
 	text-align: left;
 	color: $color_deep_cove_approx;
 	margin-left: 50px;
+	font-size: 1.1em;
 	width: 50%;
 	padding: 10px;
 }
